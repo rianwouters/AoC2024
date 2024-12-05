@@ -10,11 +10,8 @@ def dist(l0, l1):
 
 def similarity(l0, l1):        
     sum = 0
-    f = defaultdict(lambda: 0)
-    for i in l1:
-        f[i] += 1
     for i in l0:
-        sum += i * f[i]
+        sum += i * l1.count(i)
     return sum
 
 

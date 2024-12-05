@@ -1,13 +1,6 @@
-
-"""
-Not the nicest solution but nice to try ;-)
-Probably the straighforward one, searching for the X first and looking in all directions is easier
-"""
-
 from re import findall
 from functools import cmp_to_key
 
-    
 
 rules = []
 updates = []
