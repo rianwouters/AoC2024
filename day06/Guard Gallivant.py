@@ -22,7 +22,8 @@ with open("test.txt") as f:
 
     r = 0
     for oy, ox in route[1:]:
-        t, m[oy] = m[oy], m[oy][:ox] + "#" + m[oy][ox + 1:]
+        t = m[oy]
+        m[oy] = t[:ox] + "#" + t[ox + 1:]
         if walk(m, sy, sx) == "LOOPING":
             r += 1
         m[oy] = t
