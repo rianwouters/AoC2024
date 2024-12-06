@@ -21,7 +21,7 @@ with open("test.txt") as f:
     print("part 1:", len(route))
 
     r = 0
-    for n, (oy, ox) in enumerate(route[1:]):
+    for oy, ox in route[1:]:
         t, m[oy] = m[oy], m[oy][:ox] + "#" + m[oy][ox + 1:]
         if walk(m, sy, sx) == "LOOPING":
             r += 1
