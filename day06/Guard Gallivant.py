@@ -13,14 +13,14 @@ def walk(m, y, x):
         visited.add((y, x, d))            
     return visited
 
-with open("input.txt") as f:
+with open("test.txt") as f:
     r, m = 0, [l[:-1] for l in f.readlines()]
     sy, sx = next(((y, x) for y, l in enumerate(m) if (x := l.find('^')) >= 0))
     m[sy] = m[sy][:sx] + "." + m[sy][sx + 1:]
-    route = list(set((x,y) for x, y, d in walk(m, sy, sx)))
+    route = set((x,y) for x, y, d in walk(m, sy, sx))
     print("part 1:", len(route))
 
-    for y, x in route[1:]:
+    for y, x in route - {(sy, sx)}:
         t = m[y]
         m[y] = t[:x] + "#" + t[x + 1:]
         if not walk(m, sy, sx):
