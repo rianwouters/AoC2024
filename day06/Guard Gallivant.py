@@ -1,7 +1,7 @@
 deltas = [(-1, 0), (0, 1), (1, 0), (0, -1)]
 
-def walk(m, sy, sx):
-    y, x, d, dy, dx, visited = sy, sx, 0, -1, 0, {(sy, sx, 0)}
+def walk(m, y, x):
+    d, dy, dx, visited = 0, -1, 0, {(y, x, 0)}
     while 0 <= (nx := x + dx) < len(m[0]) and 0 <= (ny := y + dy) < len(m):
         if m[ny][nx] == '.':
             y, x = ny, nx
