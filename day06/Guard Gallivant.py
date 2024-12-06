@@ -9,7 +9,7 @@ def walk(m, sy, sx):
             d = (d + 1) % 4
             dy, dx = deltas[d]
         if (y, x, d) in visited:
-            return "LOOPING"
+            return
         visited.append((y, x, d))            
     return visited
 
@@ -21,10 +21,10 @@ with open("test.txt") as f:
     print("part 1:", len(route))
 
     r = 0
-    for oy, ox in route[1:]:
-        t = m[oy]
-        m[oy] = t[:ox] + "#" + t[ox + 1:]
-        if walk(m, sy, sx) == "LOOPING":
+    for y, x in route[1:]:
+        t = m[y]
+        m[y] = t[:x] + "#" + t[x + 1:]
+        if not walk(m, sy, sx):
             r += 1
-        m[oy] = t
+        m[y] = t
     print("part 2: ", r)
