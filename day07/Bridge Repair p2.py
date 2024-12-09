@@ -3,10 +3,10 @@ from re import findall
 def comp(values, n):
     n, s= 3*n, 0
     for v in values:
-        m = n % 3
-        if m == 0:
+        o = n % 3
+        if o == 0:
             s += v
-        elif m == 1:
+        elif o == 1:
             s *= v
         else:
             s = int(str(s) + str(v))
