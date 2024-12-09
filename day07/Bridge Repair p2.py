@@ -13,7 +13,7 @@ def comp(values, n):
         n //= 3
     return s
 
-with open("test.txt") as f:
+with open("input.txt") as f:
     r = 0
     for l in f.readlines():
         test, *values = list(map(int, findall('\d+', l)))
