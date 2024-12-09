@@ -17,8 +17,7 @@ with open("input.txt") as f:
     r = 0
     for l in f.readlines():
         test, *values = list(map(int, findall('\d+', l)))
-        N = len(values)
-        for n in range(pow(3, N-1)):
+        for n in range(pow(3, len(values) - 1)):
             if comp(values, n) == test:
                 r += test
                 break        
