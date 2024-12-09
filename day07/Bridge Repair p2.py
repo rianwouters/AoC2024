@@ -1,7 +1,7 @@
 from re import findall
 
 def comp(values, n):
-    n, s= 3*n, 0
+    n, s= 3 * n, 0
     for v in values:
         o = n % 3
         if o == 0:
@@ -10,6 +10,7 @@ def comp(values, n):
             s *= v
         else:
             s = int(str(s) + str(v))
+            # s = s * pow(10, int(log10(s))) + v
         n //= 3
     return s
 
