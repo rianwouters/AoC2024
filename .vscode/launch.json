@@ -1,14 +1,13 @@
 {
     "configurations": [
             {
-                "name": "Python: Current File from root",
+                "name": "Debug current file",
                 "type": "debugpy",
                 "request": "launch",
-                "program": "${file}",
+                "module": "day10.Hoof_It_p2",
                 "args": [],
                 "console": "integratedTerminal",
-                "cwd": "${workspaceRoot}",
                 "justMyCode": false
             },
-    ]
+   ]
 }

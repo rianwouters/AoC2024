@@ -1,11 +1,12 @@
 from collections import defaultdict
+from os.path import dirname, join
 from string import digits
 
-from aoc_utils import add_borders
+from utils.aoc import add_borders, get_matrix
 
 
-with open("day10/input.txt") as f:
-    m = [l[:-1] for l in f.readlines()] 
+with open(join(dirname(__file__), "input.txt")) as f:
+    m = get_matrix(f)
     m = add_borders(m)
     N, M, r1, r2 = len(m), len(m[0]), 0, 0
     for y in range(1,N-1):
