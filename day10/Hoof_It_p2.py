@@ -12,8 +12,7 @@ with open(join(dirname(__file__), "input.txt")) as f:
     for y in range(1,N-1):
         for x in range(1,M-1):
             if m[y][x] == '0':
-                s = defaultdict(lambda:0)
-                s[(y,x)] = 1
+                s = {(y,x):1}
                 for n in digits[1:]:
                     t = defaultdict(lambda:0)
                     for (v, u), c in s.items():
