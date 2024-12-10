@@ -1,0 +1,14 @@
+{
+    "configurations": [
+            {
+                "name": "Python: Current File from root",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "args": [],
+                "console": "integratedTerminal",
+                "cwd": "${workspaceRoot}",
+                "justMyCode": false
+            },
+    ]
+}
