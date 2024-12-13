@@ -9,7 +9,7 @@ with open(join(dirname(__file__), "input.txt")) as f:
     m = add_borders(m)
     N, M = len(m), len(m[0])
     b = [M*[True] for n in range(N)]
-    r = r2 = 0
+    r1 = r2 = 0
     for y in range(1, N - 1):
         for x in range(1, M - 1):
             if b[y][x]:
@@ -24,7 +24,7 @@ with open(join(dirname(__file__), "input.txt")) as f:
                         else:
                             perimeter.append((d ,py if d % 2 else px, px if d % 2 else py))
                     a += 1
-                r += a * len(perimeter)
+                r1 += a * len(perimeter)
                 r2 += a * sum(1 for _ in groupby(enumerate(sorted(perimeter)), lambda p: (p[1][0], p[1][1], p[0]-p[1][2])))
-    print("part 1: ", r)
+    print("part 1: ", r1)
     print("part 2: ", r2)
