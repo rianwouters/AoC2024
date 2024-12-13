@@ -4,7 +4,7 @@
                 "name": "Debug current file",
                 "type": "debugpy",
                 "request": "launch",
-                "module": "day10.Hoof_It_p2",
+                "module": "day12.Garden Groups p2",
                 "args": [],
                 "console": "integratedTerminal",
                 "justMyCode": false
