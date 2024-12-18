@@ -1,5 +1,4 @@
 from itertools import chain
-from math import prod
 from os.path import join, dirname
 from re import findall
 
