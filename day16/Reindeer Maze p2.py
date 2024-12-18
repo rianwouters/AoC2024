@@ -24,6 +24,6 @@ with open(join(dirname(__file__), "input.txt")) as f:
         g.add_weighted_edges_from([(target, (target[0], target[1], 1), 1)])
 
     l = shortest_path_length(g, source, weight="weight")
-    print(l[(target[0], target[1], 0)])        
+    print(l[target])        
     l = all_shortest_paths(g, source, target, weight="weight")
     print(len({(x,y) for p in l for x,y,z in p}))
