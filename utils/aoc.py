@@ -9,3 +9,6 @@ def add_borders(m, n=1, c='.'):
 
 def get_matrix(f):
     return [l[:-1] for l in f.readlines()] 
+
+def get_char_matrix(f):
+    return [list(l[:-1]) for l in f.readlines()] 
