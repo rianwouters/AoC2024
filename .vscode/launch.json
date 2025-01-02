@@ -4,7 +4,7 @@
                 "name": "Debug current file",
                 "type": "debugpy",
                 "request": "launch",
-                "module": "day12.Garden Groups p2",
+                "module": "${command:extension.commandvariable.file.relativeFileDotsNoExtension}",
                 "args": [],
                 "console": "integratedTerminal",
                 "justMyCode": false
